@@ -1,0 +1,775 @@
+=> ARRAYS	
+------------------------------------------------------------------	
+	1) Arrays.toString()  
+  
+	2) Arrays.deepToString()
+
+	3) Arrays.sort()
+	
+	4) Arrays.binarySearch()
+	
+	5) Arrays.fill()
+	
+	6) Arrays.asList()
+		
+	7) Arrays.copyOf()
+		
+	8) Arrays.equals
+
+
+
+
+
+
+String
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+1) Creating strings
+
+	- new String()
+
+2) length()
+	-> int len = str1.length();
+
+3) charAt(int index)
+	-> char ch = str1.charAt(0); // 'H'
+
+4) substring(int beginIndex)
+	-> String sub1 = str1.substring(1); // "ello"
+
+   substring(int beginIndex, int endIndex)
+	-> String sub2 = str1.substring(0, 2); // "He"
+
+5) indexOf(String str)
+	-> int index = str1.indexOf("e"); // 1
+   
+    lastIndexOf(String str)
+	-> int lastIndex = str1.lastIndexOf("l"); // 3
+
+6) toUpperCase()
+	-> String upper = str1.toUpperCase(); // "HELLO"
+   
+   toLowerCase()
+	-> String lower = str2.toLowerCase(); // "world"
+
+   trim()
+	-> String trimmed = "  Hello  ".trim(); // "Hello"
+
+7) equals(Object obj): Compares two strings for content equality.
+	-> boolean isEqual = str1.equals(str2);
+
+   equalsIgnoreCase(String anotherString): 
+	-> boolean isEqualIgnoreCase = str1.equalsIgnoreCase("HELLO");
+
+8) concat(String str)
+	-> String concatenated = str1.concat(" ").concat(str2); // "Hello World"
+   + operator: You can also use the + operator for concatenation.
+	-> String concatenated = str1 + " " + str2; // "Hello World"
+
+9) split(String regex)
+	-> String[] parts = "a,b,c".split(","); // ["a", "b", "c"]
+
+
+   join(CharSequence delimiter, CharSequence... elements)
+	-> String joined = String.join(",", parts); // "a,b,c"
+
+10) replace(char oldChar, char newChar)
+	-> String replaced = str1.replace('l', 'x'); // "Hexxo"
+
+    replace(String target, String replacement)
+	-> String replaced = str1.replace("llo", "y"); // "Hey"
+
+11) isEmpty()
+	-> boolean empty = str1.isEmpty();
+
+    startsWith(String prefix)
+	-> boolean starts = str1.startsWith("He");
+
+   endsWith(String suffix)
+	-> boolean ends = str2.endsWith("ld");
+
+
+12) String.format(String format, Object... args)
+	-> String formatted = String.format("Hello, %s!", "Alice"); // "Hello, Alice!"
+
+
+
+
+
+
+=> MAP
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+1) put(K key, V value)
+	-> map.put("key", "value");
+
+2) get(Object key)
+	-> V value = map.get("key");
+
+3) remove(Object key)
+	-> map.remove("key");
+
+4) containsKey(Object key)
+	-> boolean exists = map.containsKey("key");
+
+5) containsValue(Object value)
+	-> boolean hasValue = map.containsValue("value");
+
+6) size()
+	-> int size = map.size();
+
+7) isEmpty()
+	-> boolean empty = map.isEmpty();
+
+8) clear()
+	-> map.clear();
+
+9) keySet()
+	-> Set<K> keys = map.keySet();
+
+10) values()
+	-> Collection<V> values = map.values();
+
+11) entrySet()
+	-> Set<Map.Entry<K, V>> entries = map.entrySet();
+
+12) putAll()
+	-> map.putAll(anotherMap);
+
+13) getOrDefault()
+	-> V value = map.getOrDefault("key", defaultValue);
+
+14) replace()
+	-> map.replace("key", "newValue");
+
+15) replace()
+	-> map.replace("key", "oldValue", "newValue");
+
+
+
+
+
+
+List
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+1) add(E e)
+	-> list.add("Element");
+
+2) add(int index, E element)
+	-> list.add(0, "New Element");
+
+3) get(int index)
+	-> E element = list.get(0);
+
+4) remove(int index)
+	-> list.remove(0);
+
+5) remove(Object o)
+	-> list.remove("Element");
+
+6) set(int index, E element)
+	-> list.set(0, "Updated Element");
+
+7) contains(Object o)
+	-> boolean exists = list.contains("Element");
+
+8) size()
+	-> int size = list.size();
+
+9) isEmpty()
+	-> boolean empty = list.isEmpty();
+
+10) clear()
+	-> list.clear();
+
+
+11) indexOf(Object o)
+	-> int index = list.indexOf("Element");
+
+
+12) lastIndexOf()
+	-> int lastIndex = list.lastIndexOf("Element");
+
+
+13) subList(int fromIndex, int toIndex)		//toIndex - excluded
+	-> List<E> subList = list.subList(0, 2);
+
+
+14) iterator()
+	-> Iterator<E> iterator = list.iterator();
+
+
+
+
+
+
+SET
+------------------------------------------------------------------------------------------------------------------------------------
+
+1) add(E e)
+	-> set.add("Element");
+
+2) remove(Object o)
+	-> set.remove("Element");
+
+3) contains(Object o)
+	-> boolean exists = set.contains("Element");
+
+4) size()
+	-> int size = set.size();
+
+5) isEmpty()
+	-> Boolean empty = set.isEmpty();
+
+6) clear()
+	-> set.clear()
+
+7) iterator()
+	-> Iterator<E> iterator = set.iterator();
+
+8) toArray()
+	-> Object[] array = set.toArray();
+
+9) addAll(Collection<? extends E> c)
+	-> set.addAll(anotherSet)
+
+10) retainAll(Collection c)
+	-> set.retainAll(anotherSet)
+
+11) removeAll()
+	-> set.removeAll(anotherSet);
+
+12) containsAll()
+	-> boolean hasAll = set.containsAll(anotherSet);
+
+
+
+
+
+
+
+QUEUE
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+1) boolean add(E e)      //Throws IllegalStateException on full 
+	-> queue.add("Element");
+
+2) boolean offer(E e)	// returns false on full
+	-> queue.offer("Element");
+
+3) E remove()     //Retrieves and removes the head of the queue.
+	-> E element = queue.remove();
+
+4) E poll()	//returns null if not found
+	-> E element = queue.poll();
+
+5) E peek()
+	-> E element = queue.peek();
+
+6) E element()
+	-> E element = queue.element();
+
+7) int size()
+	-> int size = queue.size();
+
+8) boolean isEmpty()
+	-> boolean empty = queue.isEmpty();
+
+9) void clear()
+	-> queue.clear();
+
+
+
+- LinkedList & ArrayDeque
+
+10) boolean addFirst(E e)
+11) boolean addLast(E e)
+12) E removeFirst()
+13) E removeLast()
+
+
+- PriorityQueue
+
+14) Comparator<? super E> comparator()    	// need to know more about this
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+	1) Arrays.toString()
+
+	- Converts a one-dimensional array to a readable string format.
+
+	eg:
+	
+		int[] array = {1, 2, 3, 4};
+		System.out.println(Arrays.toString(array)); // Output: [1, 2, 3, 4] 
+
+	2) Arrays.deepToString()
+	
+	- Converts a multi-dimensional array (or nested arrays) to a readable string format.
+
+	eg:
+		int[][] multiArray = {{1, 2}, {3, 4}};
+		System.out.println(Arrays.deepToString(multiArray)); // Output: [[1, 2], [3, 4]]
+
+
+	3) Arrays.sort()
+
+	- Sorts the specified array into ascending numerical order.
+
+	eg: 
+		
+		int[] array = {4, 2, 3, 1};
+		Arrays.sort(array);
+		System.out.println(Arrays.toString(array)); // Output: [1, 2, 3, 4]
+
+
+	4) Arrays.copyOf()
+
+	- Copies the specified array, truncating or padding with null (for object arrays) or 0 (for numeric types) to achieve the specified length.
+
+	eg:
+
+		int[] original = {1, 2, 3};
+		int[] copy = Arrays.copyOf(original, 5);
+		System.out.println(Arrays.toString(copy)); // Output: [1, 2, 3, 0, 0]
+
+
+	5) Arrays.fill()
+
+	eg:
+
+		int[] array = new int[5];
+		Arrays.fill(array, 7);
+		System.out.println(Arrays.toString(array)); // Output: [7, 7, 7, 7, 7]
+
+
+	6) Arrays.equals()
+
+	- Returns true if the two specified arrays are equal to one another.
+
+	eg: 
+		int[] array1 = {1, 2, 3};
+		int[] array2 = {1, 2, 3};
+		System.out.println(Arrays.equals(array1, array2)); // Output: true
+
+
+	7) Arrays.binarySearch()
+
+	- Searches the specified array for the specified value using the binary search algorithm.
+	- The array must be sorted prior to making this call.
+
+	eg: 
+		int[] array = {1, 2, 3, 4, 5};
+		int index = Arrays.binarySearch(array, 3);
+		System.out.println(index); // Output: 2
+
+
+	8) Arrays.asList()
+
+	- Converts an array to a fixed-size list backed by the array.
+	= use cases
+		- Creating a List from an Array
+		- Passing an Array to Methods that Accept Lists
+		- Simplifying List Initialization
+
+			eg: 
+				List<String> colors = Arrays.asList("Red", "Green", "Blue");
+
+
+		- Working with Fixed-Size Lists
+		- Using with Collections Methods
+			eg: 
+				List<String> names = Arrays.asList("Alice", "Bob", "Charlie");
+				Collections.sort(names); // Sort the list
+				System.out.println(names); // Output: [Alice, Bob, Charlie]
+
+
+========================================================================================================================================================
+
+		
+
+
+=> Strings
+
+------------------------------------------------------------------
+
+	1) Creating strings
+		- new String()
+	2) Length and character
+		- str.length()
+		- str.charAt()
+	3) Substring
+		- substring(int begin)
+		- substring(int begin, int end)
+	4) Searching
+		- str.indexOf()
+		- str.lastIndexOf()
+	5) Modifying
+		- str.upperCase()
+		- str.toLowerCase()
+		- str.trim()
+	6) Comparing
+		- str.equals()
+		- str.equalsIgnoreCase()
+	7) Concatenation
+		- str.concat(str2)
+		- str + str2
+	8) Split & join
+		- str.split(",")
+		- str.split(",",limit)
+		- str.join(",",splitted)
+	9) Checking string properties
+		- str.isEmpty()
+		- str.startsWith()
+		- str.endsWith()
+	10) Replacing
+		- str.replace(character,character)
+		- str.replace(string,string)
+	11) Formatting
+		- str.format("Hello %s", Alice)
+
+------------------------------------------------------------------
+
+	1) Creating Strings
+
+		- String Constructors:
+
+		eg: 
+			String str1 = new String("Hello");
+			String str2 = "World";
+
+
+	2) Length and Character Access
+
+		- length(): Returns the length of the string
+	
+		eg:
+
+			int len = str1.length();
+
+		- charAt(int index): Returns the character at the specified index
+
+		eg:
+			char ch = str1.charAt(0); // 'H'
+
+
+	3) Substrings
+
+		- substring(int beginIndex): Returns a substring from the specified index to the end.
+
+		eg:
+			String sub1 = str1.substring(1); // "ello"
+
+		- substring(int beginIndex, int endIndex): Returns a substring from the begin index to end index (exclusive).
+
+		eg:
+			String sub2 = str1.substring(0, 2); // "He"
+
+
+
+	4) Searching
+
+		- indexOf(String str): Returns the index of the first occurrence of the specified substring.
+
+		eg: 
+			int index = str1.indexOf("e"); // 1
+
+		- lastIndexOf(String str): Returns the index of the last occurrence of the specified substring.
+
+		eg:
+			int lastIndex = str1.lastIndexOf("l"); // 3
+
+	5) Modifying Strings
+
+		- toUpperCase(): Converts all characters to uppercase.
+
+		eg:
+			String upper = str1.toUpperCase(); // "HELLO"
+
+		- toLowerCase(): Converts all characters to lowercase.
+
+		eg:
+			String lower = str2.toLowerCase(); // "world"
+
+		- trim(): Removes leading and trailing whitespace.
+
+		eg:
+			String trimmed = "  Hello  ".trim(); // "Hello"
+
+	6) Comparing Strings
+
+		- equals(Object obj): Compares two strings for content equality.
+
+		eg:
+			boolean isEqual = str1.equals(str2);
+
+		- equalsIgnoreCase(String anotherString): Compares two strings, ignoring case considerations.
+
+		e.g:
+			boolean isEqualIgnoreCase = str1.equalsIgnoreCase("HELLO");
+
+	7) String Concatenation
+
+		- concat(String str): Concatenates the specified string to the end of this string.
+
+		e.g:
+			String concatenated = str1.concat(" ").concat(str2); // "Hello World"
+
+		-  + operator: You can also use the + operator for concatenation.
+
+		e.g:
+			String concatenated = str1 + " " + str2; // "Hello World"
+
+	8) Splitting and Joining
+
+		- split(String regex): Splits the string into an array based on the specified regular expression.
+
+		e.g:
+			String[] parts = "a,b,c".split(","); // ["a", "b", "c"]
+
+		e.g: 
+			String str = "one,two,three,four,five";
+			String[] parts = str.split(",", 3); // Limits to 3 splits
+			// parts = ["one", "two", "three,four,five"]
+
+
+		- join(CharSequence delimiter, CharSequence... elements): Joins the elements of a string array into a single string with the specified 				delimiter.
+
+		e.g:
+			String joined = String.join(",", parts); // "a,b,c"
+
+
+	9) Replacing
+
+		- replace(char oldChar, char newChar): Replaces occurrences of a specified character.
+
+		e.g:
+			String replaced = str1.replace('l', 'x'); // "Hexxo"
+
+		- replace(String target, String replacement): Replaces occurrences of a specified substring.
+
+		e.g:
+			String replaced = str1.replace("llo", "y"); // "Hey"
+
+	10) Checking String Properties
+
+		- isEmpty(): Checks if the string is empty.
+
+		e.g:
+			boolean empty = str1.isEmpty();
+
+		- startsWith(String prefix): Checks if the string starts with the specified prefix.
+
+		e.g:
+			boolean starts = str1.startsWith("He");
+
+		- endsWith(String suffix): Checks if the string ends with the specified suffix.
+
+		e.g:
+			boolean ends = str2.endsWith("ld");
+
+	11) String Formatting
+
+		- String.format(String format, Object... args): Creates a formatted string.
+
+		e.g:
+			String formatted = String.format("Hello, %s!", "Alice"); // "Hello, Alice!"
+
+			%s: String
+			%d: Integer
+			%f: Floating-point number
+			%x: Hexadecimal integer
+			%b: Boolean
+			%n: Newline (platform-independent)
+
+=================================================================================================================================================
+
+
+
+=> Map
+
+------------------------------------------------------------------------------------
+
+1) map.put("key", "value");
+
+2) V value = map.get("key");
+
+3) map.remove("key");
+
+4) boolean exists = map.containsKey("key");
+
+5) boolean hasValue = map.containsValue("value");
+
+6) int size = map.size();
+
+7) boolean empty = map.isEmpty();
+
+8) map.clear();
+
+9) Set<K> keys = map.keySet();
+
+10) Collection<V> values = map.values();
+
+11) Set<Map.Entry<K, V>> entries = map.entrySet();
+
+12) map.putAll(anotherMap);
+
+13) V value = map.getOrDefault("key", defaultValue);
+
+14) map.replace("key", "newValue");
+
+15) map.replace("key", "oldValue", "newValue");
+
+
+------------------------------------------------------------------------------------
+
+
+	1) put(K key, V value)
+
+		- Associates the specified value with the specified key.
+		- If the map previously contained a mapping for the key, the old value is replaced.
+
+		- map.put("key", "value");
+
+
+	2) get(Object key)
+
+		- Returns the value to which the specified key is mapped, or null if the map contains no mapping for the key.
+
+		- V value = map.get("key");
+
+
+	3) remove(Object key)
+
+		- Removes the mapping for the specified key if present.
+
+		- map.remove("key");
+
+
+	4) containsKey(Object key)
+
+		- Returns true if the map contains a mapping for the specified key.
+		
+			- boolean exists = map.containsKey("key");
+
+
+
+	5) containsValue(Object value)
+
+		- Returns true if the map maps one or more keys to the specified value.
+		- boolean hasValue = map.containsValue("value");
+
+
+
+	6) size()
+
+	- Returns the number of key-value mappings in the map.
+
+		- int size = map.size();
+
+
+	7) isEmpty()
+
+		- boolean empty = map.isEmpty();
+
+
+	8) clear()
+
+		- Removes all mappings from the map.
+		- map.clear();
+
+
+	9) keySet()
+
+		- Returns a set view of the keys contained in the map.
+		- Set<K> keys = map.keySet();
+
+
+	10) values()
+
+		- Returns a collection view of the values contained in the map.
+		- Collection<V> values = map.values();
+
+
+	11) entrySet()
+
+		- Returns a set view of the mappings contained in the map.
+		- Set<Map.Entry<K, V>> entries = map.entrySet();
+
+
+	12) putAll(Map<? extends K, ? extends V> m)
+
+		- Copies all of the mappings from the specified map to this map.
+			- map.putAll(anotherMap);
+
+
+	13) getOrDefault(Object key, V defaultValue)
+
+		- Returns the value to which the specified key is mapped, or defaultValue if the map contains no mapping for the key.
+			- V value = map.getOrDefault("key", defaultValue);
+
+
+	14) replace(K key, V value)
+
+		- Replaces the entry for a key only if it is currently mapped to some value.
+			- map.replace("key", "newValue");
+
+
+	15) replace(K key, V oldValue, V newValue)
+
+		- Replaces the entry for a key only if currently mapped to the specified value.
+			- map.replace("key", "oldValue", "newValue");
+
+=================================================================================================================================================
+
+=> List
+------------------------------------------------------------------------------------
+
+1) list.add("Element");
+
+2) list.add(0, "New Element");
+
+3) E element = list.get(0);
+
+4) list.remove(0);
+
+5) list.remove("Element");
+
+6) list.set(0, "Updated Element");
+
+7) boolean exists = list.contains("Element");
+
+8) int size = list.size();
+
+9) boolean empty = list.isEmpty();
+
+10) list.clear();
+
+11) int index = list.indexOf("Element");
+
+12) int lastIndex = list.lastIndexOf("Element");
+
+13) List<E> subList = list.subList(0, 2);
+
+14) Iterator<E> iterator = list.iterator();
+
+
+-> Implementing classes
+
+
+------------------------------------------------------------------------------------
+
+
+=> HashMap
+=> TreeMap
+=> Stack
+=> Vector
+=> Queue
